@@ -1,0 +1,157 @@
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  margin: 5px;
+}
+
+.train-container {
+  margin-bottom: 1rem;
+}
+
+.layers-settings {
+  margin-right: 25px;
+  width: 600px;
+}
+
+.iteration-settings-container {
+  margin-bottom: 10px;
+
+  span {
+    margin-right: 10px;
+  }
+
+  input {
+    margin-right: 10px;
+  }
+}
+
+.train-buttons {
+  margin-left: 10px;
+
+  button {
+    min-width: 100px;
+  }
+}
+
+.layer-item {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  position: relative;
+
+  .remove-layer {
+    position: absolute;
+    right: -175px;
+  }
+
+  div {
+    width: 50%;
+  }
+}
+
+.add-new-hidden-layer {
+  margin-bottom: 5px;
+}
+
+.outputs {
+  margin-bottom: 1rem;
+
+  .item {
+    div {
+      width: 50%;
+    }
+
+    div + div {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.network {
+  align-items: center;
+}
+
+.neural-input-container {
+  margin: 10px;
+  height: 40px;
+  align-items: center;
+  display: flex;
+
+  .input-label {
+    margin-right: 10px;
+  }
+}
+
+.neural-input {
+  width: 60px;
+  padding-right: 10px;
+}
+
+.outputs-container {
+  margin-right: 10px;
+}
+
+.neuron-output {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.neuron-container {
+  position: relative;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+
+  .neuron {
+    position: absolute;
+    z-index: 1;
+    background: white;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    border: 2px solid gray;
+
+    &.input {
+      border-color: blue;
+    }
+
+    &.output {
+      border-color: green;
+    }
+  }
+}
+
+.connection {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  pointer-events: none;
+}
+
+svg {
+  overflow: unset;
+}
+
+.how-to-use {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.how-to-use-container {
+  margin-bottom: 15px;
+
+  span {
+    display: block;
+  }
+}
