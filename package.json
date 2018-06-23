@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "predeployLive": "ng build --prod --base-href /MachineLearningPractice1/",
+    "deployLive": "npm run cleanup && gh-pages -d dist -e dist",
+    "cleanup": "rm -rf node_modules/gh-pages/.cache",
+    "publish": "gh-pages -d dist/machineLearningPractice1",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -22,6 +26,7 @@
     "@angular/router": "^6.0.3",
     "@ng-bootstrap/ng-bootstrap": "^2.1.2",
     "core-js": "^2.5.4",
+    "gh-pages": "^1.2.0",
     "node-sass": "^4.9.0",
     "rxjs": "^6.0.0",
     "synaptic": "^1.1.4",
