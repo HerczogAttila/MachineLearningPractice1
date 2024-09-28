@@ -116,7 +116,7 @@
   .neuron {
     position: absolute;
     z-index: 1;
-    background: white;
+    background: var(--background-color);
     width: inherit;
     height: inherit;
     border-radius: 50%;

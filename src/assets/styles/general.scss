@@ -1,0 +1,14 @@
+
+:root {
+  --background-color: #121212;
+  --text-color: #BBBBBB;
+}
+
+body {
+  margin: 0;
+}
+
+input, textarea, body, button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Architect, Layer, Network, Trainer } from 'synaptic';
+import { Layer, Network, Trainer } from 'synaptic';
 import { andSets, nandSets, norSets, notSets, orSets, xnorSets, xorSets } from './trainingSets';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  imports: [CommonModule, FormsModule]
 })
 export class AppComponent implements OnInit {
 
@@ -21,7 +25,7 @@ export class AppComponent implements OnInit {
     iterations: 10000,
     log: false,
     shuffle: true,
-    cost: (target, output) => {
+    cost: (target: any, output: any) => {
       let mse = 0;
       for (let i = 0; i < output.length; i++) {
         mse += Math.pow(target[i] - output[i], 2);
@@ -36,7 +40,7 @@ export class AppComponent implements OnInit {
   private networkArchitect: Network;
   private trainer: Trainer;
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.networkArchitect = new Network();
     this.trainer = new Trainer(this.networkArchitect);
     this.onGenerateLayers();
